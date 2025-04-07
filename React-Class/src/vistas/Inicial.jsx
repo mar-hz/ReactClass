@@ -9,7 +9,7 @@ function Inicial() {
 
   return (
     <>
-      <div>
+      <div className="logo container">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>

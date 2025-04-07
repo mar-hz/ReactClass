@@ -1,16 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Inicial from './vistas/Inicial.jsx'
-import Boton from './components/Boton.jsx'
+import Perfil from './vistas/Perfil.jsx'
+import Login from './vistas/Login.jsx'
+import ResponsiveAppBar from './components/ResponsiveAppBar.jsx'
 
 
 function App() {
   return (
     <BrowserRouter>
+    <ResponsiveAppBar />
       <Routes>
-        <Route path="/" element={<Inicial />} />
+        <Route path="/" element={<Login />} />
         <Route path="/home" element={<Inicial />} />
-        <Route path="/boton" element={<Boton texto={"Vista del Boton"} onClick={() => {}} />} />
+        <Route path="/user/profile" element={<Perfil />} />
       </Routes>
     </BrowserRouter>
   )
