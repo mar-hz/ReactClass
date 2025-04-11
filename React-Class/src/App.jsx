@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import './App.css'
 import Inicial from './vistas/Inicial.jsx'
 import Perfil from './vistas/Perfil.jsx'
@@ -31,6 +31,7 @@ function App() {
         <Route path="/" element={<Login login={login} />} />
         <Route path="/home" element={isLogin ? <Inicial /> : <Login login={login} />} />
         <Route path="/user/profile" element={isLogin ? <Perfil /> : <Login login={login} />} />
+        <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>
       <Footer />
     </BrowserRouter>

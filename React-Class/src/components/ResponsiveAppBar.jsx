@@ -34,8 +34,8 @@ function ResponsiveAppBar({ logout }) {
   const handleCloseNavMenu = (e) => {
     setAnchorElNav(null);
     if (e.target.textContent === pages[0]) {
-      // navigate(routes[0]);
       logout();
+      navigate(routes[0]);
     } else if (e.target.textContent === pages[1]) {
       navigate(routes[1]);
     } else if (e.target.textContent === pages[2]) {
